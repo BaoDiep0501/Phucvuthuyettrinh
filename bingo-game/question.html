@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Câu hỏi · Bingo Game</title>
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="game question-page">
+        <header>
+            <h1>CÂU HỎI</h1><span class="spark" aria-hidden="true">✦</span>
+        </header>
+        <section class="question-top"><span id="question-number" class="badge"></span>
+            <div class="clock" id="clock"><span id="timer" role="timer"
+                    aria-label="Thời gian còn lại">15</span><small>GIÂY</small></div>
+        </section>
+        <section class="question-card">
+            <div class="question-content">
+                <p id="question-text"></p>
+                <pre id="code-block" class="code-block" hidden><code id="question-code"></code></pre>
+                <div id="options" class="options"></div>
+                <p id="choice-feedback" class="choice-feedback" aria-live="polite"></p>
+                <div id="answer" class="answer" hidden aria-live="polite"></div>
+            </div>
+        </section>
+        <div class="question-actions">
+            <div class="timer-controls"><button id="start" class="blue">Bắt đầu</button><button id="reveal"
+                    class="answer-button">Hiện đáp án</button>
+                <p id="timer-status" class="hint" aria-live="polite">Sẵn sàng? Bắt đầu 15 giây.</p>
+            </div><button id="complete" class="orange complete"><span aria-hidden="true">✓</span> Hoàn tất</button>
+        </div>
+    </main>
+    <script src="questions.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>

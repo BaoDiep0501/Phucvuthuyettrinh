@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game</title>
+    <meta name="description" content="Random câu hỏi 1–20, đồng hồ 15 giây và danh sách câu đã chơi.">
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="game">
+        <header>
+            <h1>GAME</h1><span class="spark" aria-hidden="true">✦</span>
+        </header>
+        <section class="draw" aria-label="Random câu hỏi">
+            <p class="label">CÂU TIẾP THEO</p>
+            <div id="result" class="number" aria-live="polite">?</div>
+            <button id="random" class="orange">Random
+                <span aria-hidden="true">✦</span>
+            </button>
+            <p id="message" class="hint" aria-live="polite">20 câu hỏi · Mỗi số chỉ xuất hiện một lần</p>
+        </section>
+        <section class="history">
+            <div class="history-heading">
+                <h2>CÂU ĐÃ CHƠI</h2><span id="progress">0 / 20</span>
+            </div>
+            <div id="numbers" class="chips"></div>
+            <p id="empty">Các số sẽ xuất hiện ở đây sau khi hoàn tất câu hỏi.</p>
+        </section>
+    </main>
+    <script src="questions.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
